@@ -1,3 +1,4 @@
+raise UserException('THIS PROGRAM HAS A BUG. THE FINAL PERIOD IS NEVER WRITTEN. DO NOT USE')
 import csv # import csv modules
 from alive_progress import alive_bar # import progress bar functionality
 from string import ascii_uppercase
