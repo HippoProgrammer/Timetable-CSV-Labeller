@@ -32,7 +32,7 @@ for day in days:
                 week_data[period] = normalize('NFKC',input(f'PERIOD {period}: ').strip())
         sheets[week2strheading(day,week)] = week_data
 with alive_bar(6) as bar:
-    with open(f'{file}.csv','w',encoding='utf-8') as csvfile:
+    with open(f'{file}.csv','w',encoding='utf-8',newline='') as csvfile:
         writer = csv.writer(csvfile, delimiter = ',')
         for row in range(6):
             row_list = []
