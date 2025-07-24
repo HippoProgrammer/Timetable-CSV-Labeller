@@ -1,4 +1,3 @@
-raise UserException('THIS PROGRAM HAS A BUG. THE FINAL PERIOD IS NEVER WRITTEN. DO NOT USE')
 import csv # import csv modules
 from alive_progress import alive_bar # import progress bar functionality
 from string import ascii_uppercase
@@ -44,7 +43,10 @@ with alive_bar(6) as bar:
             else:
                 for week_data in list(sheets.values()):
                     for col in range(ceil(no_weeks/2)):
-                        row_list.append(week_data[row])
+                        if week_data[row] != '':
+                            row_list.append(week_data[row])
+                        else:
+                            row_list.append(' ')
                     
             writer.writerow(row_list)
             bar()
